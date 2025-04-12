@@ -2,7 +2,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
+
+	  <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>5.9</version>
+        <relativePath />
+    </parent>
+
+    <artifactId>slack</artifactId>
+    <packaging>hpi</packaging>
+    <version>${changelist}</version>
+    <name>Slack Notification Plugin</name>
+    <description>A Build status publisher that notifies channels on a Slack team</description>
+    <url>https://github.com/jenkinsci/slack-plugin</url>
+
+    <properties>
+        <changelist>999999-SNAPSHOT</changelist>
+        <gitHubRepo>jenkinsci/slack-plugin</gitHubRepo>
+        <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+        <jenkins.baseline>2.479</jenkins.baseline>
+        <jenkins.version>${jenkins.baseline}.1</jenkins.version>
+        <hpi.compatibleSinceVersion>2.32</hpi.compatibleSinceVersion>
+        <checkstyle.failsOnError>true</checkstyle.failsOnError>
+        <checkstyle.failOnViolation>true</checkstyle.failOnViolation>
+    </properties>
+	
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.5</version>
